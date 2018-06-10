@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<head>
+    <title>Crystal Collector</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    
+</head>
+
+<body>
+    <header>
+        <div id="titleHeader">Crystal Collector</div>
+    </header>
+    <div class="container">  
+        
+        <div id="instructionsDiv">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum non nulla molestiae in laboriosam accusantium optio, corrupti magnam asperiores placeat.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum cupiditate iure repudiandae perferendis? Repellat porro officiis voluptatum accusantium nam debitis.</p>
+        </div>
+
+        <div id="guessNumber"><span id="guess-number">0</span>
+        </div>
+
+        <div class="scoreboard">
+                <div id="userWins">Wins: <span id="user-wins">0</span></div>
+                <div id="userLoss">Losses: <span id="user-losses">0</span></div>
+
+        </div>
+
+        <div class="gems">
+            <!-- <div="button1">
+                    <img src="assets/images/jade.jpeg" alt="jade" class="button" id="gem1" height="100px" width="100px";>
+            </div> -->
+
+            <div class="card shadow-lg gemCard" id="gem1" style="width: 12rem; ">
+                    <img class="card-img-top" src="./assets/images/jade.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Jade</h5>
+                      <p class="card-text">An ornamental mineral, mostly known for its green varieties, which is featured prominently in ancient Asian art.</p>
+                    </div>
+                </div>
+
+                         <!-- <div="button2">
+                    <img src="assets/images/purple.jpeg" alt="jade" class="button" id="gem2" height="100px" width="100px";>
+            </div> -->
+
+            <div class="card shadow-lg gemCard" id="gem2" style="width: 12rem; ">
+                <img class="card-img-top" src="./assets/images/purple.jpeg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Amethyst</h5>
+                    <p class="card-text">A well known mineral and gemstone. It is the purple variety of the mineral Quartz, and its most valuable and prized variety.</p>
+                </div>
+            </div>
+
+            <!-- <div="button3">
+                    <img src="assets/images/ruby.jpeg" alt="jade" class="button" id="gem3" height="100px" width="100px";>
+            </div> -->
+
+            <div class="card shadow-lg gemCard" id="gem3" style="width: 12rem; ">
+                    <img class="card-img-top" src="./assets/images/ruby.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Ruby</h5>
+                        <p class="card-text">a pink to blood-red colored gemstone, a variety of the mineral corundum.</p>
+                    </div>
+            </div>
+<!-- 
+            <div="button4">
+                    <img src="assets/images/topaz.jpeg" alt="jade" class="button" id="gem4" height="100px" width="100px";>
+            </div> -->
+
+            <div class="card shadow-lg gemCard" id="gem4" style="width: 12rem; ">
+                    <img class="card-img-top" src="./assets/images/topaz.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Topaz</h5>
+                        <p class="card-text">a silicate mineral of aluminium and fluorine with the chemical formula Al2SiO4(F, OH)2</p>
+                    </div>
+            </div>
+
+        </div>
+
+        <div id="scoreInfo">Your Total Score is: </div>
+        <div id="gemCount"><span="gem-count">0</span></div>
+    </div>
+
+</body>
+<script>
+
+    $( document ).ready(function() {
+
+    var gemSum = 0; 
+    var wins = 0;
+    var losses = 0; 
+
+    var randomScore = Math.floor(Math.random()*100);
+        
+    var randomGem1 = Math.floor(Math.random()*12+1);
+    var randomGem2 = Math.floor(Math.random()*12+1);
+    var randomGem3 = Math.floor(Math.random()*12+1);
+    var randomGem4 = Math.floor(Math.random()*12+1);
+    
+    console.log("randomGem1: " + randomGem1);
+    console.log("randomGem2: " + randomGem2);
+    console.log("randomGem3: " + randomGem3);
+    console.log("randomGem4: " + randomGem4);
+    
+    $("#guess-number").html(randomScore);
+    
+    function resetFunction() {
+        randomGem1 = Math.floor(Math.random()*12+1);
+        randomGem2 = Math.floor(Math.random()*12+1);
+        randomGem3 = Math.floor(Math.random()*12+1);
+        randomGem4 = Math.floor(Math.random()*12+1);
+        console.log("Random Gem1: " + randomGem1 + " Random Gem2: " + randomGem2 + " Random Gem3" + randomGem3 + " Random Gem4: " + randomGem4);
+        randomScore = Math.floor(Math.random()*100);
+        $("#guess-number").html(randomScore);
+        gemSum = 0; 
+        console.log(gemSum);
+        
+    }
+
+    // create a function that randomizes gem values
+
+        $("#gem1").on("click", function () {
+            gemSum += randomGem1; 
+            $("#gemCount").html(gemSum);
+            console.log(gemSum);
+            
+        });
+
+        $("#gem2").on("click", function () {
+            gemSum += randomGem2; 
+            $("#gemCount").html(gemSum);
+            console.log(gemSum);
+            
+        });
+
+        $("#gem3").on("click", function () {
+            gemSum += randomGem3; 
+            $("#gemCount").html(gemSum);
+            console.log(gemSum);
+
+        });
+
+
+        $("#gem4").on("click", function () {
+            gemSum += randomGem4; 
+            $("#gemCount").html(gemSum);
+            console.log(gemSum);
+
+        });
+
+        $(".button").on("click", function() {
+            if (gemSum > randomScore) {
+                losses++;
+                $("#user-losses").html(losses);
+                alert("YOU LOSE, You went " + (gemSum - randomScore) + " over! ");
+                resetFunction(); 
+
+            } else if (gemSum === randomScore) {
+                wins++; 
+                $("#user-wins").html(wins);
+                alert("YOU WIN!") ;
+                resetFunction(); 
+                
+            }
+
+        
+        });
+
+    });
+
+</script>
+</html>
