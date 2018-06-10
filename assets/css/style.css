@@ -1,6 +1,16 @@
 .gemCard {
     float: left;
-    height: 400px; 
+    /* height: 400px;  */
+    margin: 26px; 
+}
+
+.scoreCard {
+    float: left; 
     margin: 20px; 
+
+}
+
+#gem1 {
+    clear: left; 
 }
 

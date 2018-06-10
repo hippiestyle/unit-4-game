@@ -9,77 +9,89 @@
 
 <body>
     <header>
-        <div id="titleHeader">Crystal Collector</div>
+            <div class="jumbotron jumbotron-fluid crystalHeader">
+                    <div class="container">
+                      <h1 class="display-4 titleHeader">Crystal Collector </h1>
+                      <p class="lead">A classic game of addition, crystals, memory and fun. Try your luck! </p>
+                    </div>
+                  </div>
+
     </header>
     <div class="container">  
         
         <div id="instructionsDiv">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum non nulla molestiae in laboriosam accusantium optio, corrupti magnam asperiores placeat.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum cupiditate iure repudiandae perferendis? Repellat porro officiis voluptatum accusantium nam debitis.</p>
+            <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+            <p>You win the game by matching your total score to the random number. You lost the game if your total score goes above the random number.</p>
+            <p>The value of each crystal is hidden from you until you click on it. Then you will have to use your memory to win the game</p>
         </div>
 
-        <div id="guessNumber"><span id="guess-number">0</span>
+    </div>
+    
+</div> 
+<div class="container scoreContainer">
+    <div class="row">
+        <div class="col-sm-4 card bg-warning mb-3 text-white scoreCard " style="max-width: 15rem;">
+            <div class="card-header">Collect Crystals </div>
+            <div class="card-body">
+                <div id="guessNumber"><span id="guess-number">0</span></div>
+                </div>
+        </div>
+              
+
+        <div class="col-sm-4 card bg-info mb-3 text-white scoreCard" style="max-width: 15rem;">
+                <div class="card-header">Scoreboard</div>
+                <div class="card-body">
+                        <div id="userWins">Wins: <span id="user-wins">0</span></div>
+                        <div id="userLoss">Losses: <span id="user-losses">0</span></div>
+                </div>
         </div>
 
-        <div class="scoreboard">
-                <div id="userWins">Wins: <span id="user-wins">0</span></div>
-                <div id="userLoss">Losses: <span id="user-losses">0</span></div>
 
+        <div class="col-sm-4 card bg-danger mb-3 text-white scoreCard" id="totalScoreCard" style="max-width: 15rem;">
+                <div class="card-header" id="scoreInfo">Your Total Score Is: </div>
+                <div class="card-body">
+                        <div id="gemCount"><span="gem-count">0</span></div>
+                </div>
         </div>
+    </div>
+</div>
+        <div class="gems container gemContainer">
 
-        <div class="gems">
-            <!-- <div="button1">
-                    <img src="assets/images/jade.jpeg" alt="jade" class="button" id="gem1" height="100px" width="100px";>
-            </div> -->
-
-            <div class="card shadow-lg gemCard" id="gem1" style="width: 12rem; ">
+        <div class="row">
+            <div class="col-sm-2 card shadow-lg gemCard button" id="gem1" style="width: 10rem; ">
                     <img class="card-img-top" src="./assets/images/jade.jpeg" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">Jade</h5>
-                      <p class="card-text">An ornamental mineral, mostly known for its green varieties, which is featured prominently in ancient Asian art.</p>
+                      <p class="card-text">An ornamental mineral, mostly known for its green varieties.</p>
                     </div>
                 </div>
 
-                         <!-- <div="button2">
-                    <img src="assets/images/purple.jpeg" alt="jade" class="button" id="gem2" height="100px" width="100px";>
-            </div> -->
-
-            <div class="card shadow-lg gemCard" id="gem2" style="width: 12rem; ">
+            <div class="col-sm-2 card shadow-lg gemCard button" id="gem2" style="width: 10rem; ">
                 <img class="card-img-top" src="./assets/images/purple.jpeg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Amethyst</h5>
-                    <p class="card-text">A well known mineral and gemstone. It is the purple variety of the mineral Quartz, and its most valuable and prized variety.</p>
+                    <p class="card-text">A well known purple mineral and gemstone.</p>
                 </div>
             </div>
-
-            <!-- <div="button3">
-                    <img src="assets/images/ruby.jpeg" alt="jade" class="button" id="gem3" height="100px" width="100px";>
-            </div> -->
-
-            <div class="card shadow-lg gemCard" id="gem3" style="width: 12rem; ">
+      
+            <div class="col-sm-2 card shadow-lg gemCard button" id="gem3" style="width: 10rem; ">
                     <img class="card-img-top" src="./assets/images/ruby.jpeg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Ruby</h5>
                         <p class="card-text">a pink to blood-red colored gemstone, a variety of the mineral corundum.</p>
                     </div>
             </div>
-<!-- 
-            <div="button4">
-                    <img src="assets/images/topaz.jpeg" alt="jade" class="button" id="gem4" height="100px" width="100px";>
-            </div> -->
 
-            <div class="card shadow-lg gemCard" id="gem4" style="width: 12rem; ">
+            <div class="col-sm-2 card shadow-lg gemCard button" id="gem4" style="width: 10rem; ">
                     <img class="card-img-top" src="./assets/images/topaz.jpeg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Topaz</h5>
-                        <p class="card-text">a silicate mineral of aluminium and fluorine with the chemical formula Al2SiO4(F, OH)2</p>
+                        <p class="card-text">a silicate mineral of aluminium and fluorine</p>
                     </div>
             </div>
 
         </div>
 
-        <div id="scoreInfo">Your Total Score is: </div>
-        <div id="gemCount"><span="gem-count">0</span></div>
     </div>
 
 </body>
