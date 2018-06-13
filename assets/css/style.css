@@ -14,3 +14,20 @@
     clear: left; 
 }
 
+#did-you-win {
+    text-align: center; 
+    font-size: 32px; 
+    padding: 0px; 
+}
+
+#win-lose {
+    visibility: hidden; 
+}
+
+#guess-number {
+    font-size: 32px;
+}
+
+#gemCount {
+    font-size: 32px; 
+}
